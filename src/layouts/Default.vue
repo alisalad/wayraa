@@ -1,32 +1,33 @@
 <template>
   <div class="layout">
-    <header class="header">
-      <strong>
-      </strong>
-      <header class="text-gray-700 body-font bg-blue-500">
-  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-      </svg>
-      <span class="ml-3 text-xl text-gray-100">Waryaa Dev's</span>
-    </a>
+<body class="bg-gray-100 antialiased font-sans">
+  <header class="lg:px-16 px-8 bg-white flex flex-wrap items-center py-4 shadow-md">
+    <div class="flex-1 flex justify-between items-center">
+      <a href="#" class="text-xl">Waryaa Dev's</a>
+    </div>
 
-    <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center text-gray-100">
-      <a class="mr-5 hover:text-gray-900"></a><g-link to="/">Home</g-link>
-      <a class="mr-5 hover:text-gray-900"></a><g-link to="/about">About us</g-link>
-      <a class="mr-5 hover:text-gray-900"></a><g-link to="/features">Features</g-link>
-      <a class="mr-5 hover:text-gray-900"></a><g-link to="/contact">Contact Us</g-link>
-    </nav>
-
-    <button class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">Button
-      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-        <path d="M5 12h14M12 5l7 7-7 7"></path>
+    <label for="menu-toggle" class="pointer-cursor md:hidden block">
+      <svg class="fill-current text-gray-900"
+        xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+        <title>menu</title>
+        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
       </svg>
-    </button>
-  </div>
-</header>
-    </header>
+    </label>
+    <input class="hidden" type="checkbox" id="menu-toggle" />
+
+    <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
+      <nav>
+        <ul class=" uppercase md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
+          <li><a class="md:p-4 py-3 px-0 block" href="/">Home</a></li>
+          <li><a class="md:p-4 py-3 px-0 block" href="/about">About Us</a></li>
+          <li><a class="md:p-4 py-3 px-0 block" href="/features">Features</a></li>
+          <li><a class="md:p-4 py-3 px-0 block md:mb-0 mb-2" href="/contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</body>
+
     <slot/>
 <footer class="text-gray-700 body-font">
   <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
@@ -78,5 +79,9 @@ query {
 </static-query>
 
 <style src="../main.css"/>
+
+@media (min-width: 1024px) {
+  .top-navbar {
+    display: inline-flex !important
 
 
