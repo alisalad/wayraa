@@ -35,7 +35,7 @@
     </div>
     <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
 
-      <g-image src="~/img/blackman.svg" width="500"/>
+      <g-image src="~/img/blackman.svg"/>
 
 
 
